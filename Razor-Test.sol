@@ -18,7 +18,7 @@ contract RazorTest{
         interval=_interval;
         Interval_duration=_no_of_intervals;
         if(_interval == 1){
-            deadline= now + (_no_of_intervals* 1 minutes);
+            deadline= now + (_no_of_intervals* 1 minutes);      // Calculating deadline according to the users inputs
             return deadline;
         }
         else if(_interval == 2){
