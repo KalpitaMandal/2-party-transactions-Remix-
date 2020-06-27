@@ -1,14 +1,12 @@
 pragma solidity ^0.5.0;
 
 contract RazorTest{
-    address payable creator;
-    uint256 amount;
     uint256 deadline;
     uint256 interval;
     uint256 Interval_duration;
     
     function() external payable { } //fallback function to receive payments from user to contract
-    
+
     function CustomPaymentType(uint256 _interval, uint256 _no_of_intervals) public returns(uint256) {
         // select among the options to set the payment type:
         // 1 => minutes
@@ -18,7 +16,7 @@ contract RazorTest{
         interval=_interval;
         Interval_duration=_no_of_intervals;
         if(_interval == 1){
-            deadline= now + (_no_of_intervals* 1 minutes);      // Calculating deadline according to the users inputs
+            deadline= now + (_no_of_intervals* 1 minutes);          // Calculating deadline according to the user 
             return deadline;
         }
         else if(_interval == 2){
