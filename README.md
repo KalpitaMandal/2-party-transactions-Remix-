@@ -126,11 +126,11 @@ The solution code provided can be tested in the following ways:
   ```shell
   > razor.CustomPaymentType(1,1)
   ```
-  - Next type the following command to call the MakePayment function to transfer funds to the creator/consultant
+  - Next type the following command to call the MakePayment function to transfer funds to the creator/consultant. The address of the account is to be pasted here in single quotes. Once the function is carried out we have to wait for the interval to be expired before we can call this function again, meanwhile if the function is called, error will be observed.
   ```shell
-  > razor.MakePayment(accounts[9],1) --value is displayed in wei
+  > razor.MakePayment('0x92be99E3880aC66D344e143593C17f9f208Db9A1',1) 
   ```
-  - To check if the function worked properly we will check the balance of the target contract.
+  - To check if the function worked properly we will check the balance of the target account.
   ```shell
   > await web3.eth.getBalance(accounts[9])
   ```
