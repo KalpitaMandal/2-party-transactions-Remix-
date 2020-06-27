@@ -1,4 +1,4 @@
-# 2-party-transactions-Remix-
+# Recurring Transaction
 There are lots of digital content creators/consultants across the globe. A big issue with them is late payment from consumers. They do the work but they aren't sure whether they will be paid on time. A solution for this problem is a recurring platform for freelancers where project owners can streamline the payment on hourly, weekly, monthly basis.
 
 The solution code provided can be tested in the following ways:
