@@ -36,7 +36,7 @@ contract RazorTest{
     
     function MakePayment(address payable _to, uint256 _amount) public {
         require(msg.sender.balance>_amount);            // Checking for balance to be greater than the value 
-        // require(msg.sender!=_to);                    // For making transfer possible only for the consumers
+        require(msg.sender!=_to);                       // For making transfer possible only for the consumers
         require(now>deadline);                          // Checking if it's time to make the payment
         _to.transfer(_amount);
         CustomPaymentType(interval,Interval_duration);  // Calls the function to continuously check for payment times and block payments during the other times
